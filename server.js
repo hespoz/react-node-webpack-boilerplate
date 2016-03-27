@@ -68,7 +68,6 @@ app.use(function(err, req, res, next) {
 
 
 http.createServer(app).listen(process.env.PORT || config.port, function() {
-	console.log(path.join(__dirname, 'public'));
   console.log('\nExpress server listening on port ' + config.port);
 });
 
