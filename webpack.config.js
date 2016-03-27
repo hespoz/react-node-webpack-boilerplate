@@ -37,11 +37,7 @@ var config = {
   plugins: [
     new ExtractTextPlugin('styles.css', {
             allChunks: true
-        }),
-    new CopyWebpackPlugin([
-      { from: APP_DIR + '/index.html'},
-      { from: APP_DIR + '/login.html'}
-    ])
+    })
 
   ]
 
