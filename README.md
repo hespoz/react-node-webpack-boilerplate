@@ -14,3 +14,30 @@ Go to the directory where the project was downloaded
 ```sh
 $ cd react-node-webpack-boilerplate/
 ```
+Inside the directory we need to install all dependencies 
+```sh
+$ npm install
+```
+After installing we need to run the webpack script. Webpack will be listening for changes on the jsx and css files and each time those files change webpack will compile a single app.js file that will be placed on public directory.
+
+```sh
+$ npm run webpack-dev
+```
+
+Webpack will take few seconds to grab the jsx, css and generate the app.js file in public, once this tasks is done you will see something like this.
+
+```sh
+
+Hash: fb65c30180ed669b724b
+Version: webpack 1.12.14
+Time: 15287ms
+         Asset      Size  Chunks             Chunk Names
+        app.js    888 kB    0, 1  [emitted]  pageA, pageB
+    styles.css  71 bytes       0  [emitted]  pageA
+    app.js.map   1.01 MB    0, 1  [emitted]  pageA, pageB
+styles.css.map  87 bytes       0  [emitted]  pageA
+    + 219 hidden modules
+Child extract-text-webpack-plugin:
+        + 2 hidden modules
+
+```
