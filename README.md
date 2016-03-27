@@ -3,6 +3,7 @@ In order to install this boilerplate you need to have installed on your machine 
 
 - Node version >= 4
 - npm
+- Nodemon
 
 
 # Installation
@@ -41,3 +42,21 @@ Child extract-text-webpack-plugin:
         + 2 hidden modules
 
 ```
+Then you need to run the nodejs server, we will use nodemon to detect when the js files of the server changes and rebuild the application on the fly.
+
+```sh
+$ npm run server-dev
+```
+If everything went fine you should see the following
+
+```sh
+[nodemon] 1.9.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node server.js`
+
+Express server listening on port 3000
+```
+Then go and open http://localhost:3000/ url, and check if everything is working.
+
+At this point you can open the project using your favorite IDE and start coding, each time you save a file the webpack and nodemon scripts will rebuild your application.
