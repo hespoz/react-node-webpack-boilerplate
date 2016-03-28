@@ -9,7 +9,8 @@ var APP_DIR = path.resolve(__dirname, 'src/client/app');
 var config = {
   entry: {
         pageA: APP_DIR + '/components/index.jsx',
-        pageB: APP_DIR + '/components/login.jsx'
+        pageB: APP_DIR + '/components/login.jsx',
+        pageC: APP_DIR + '/components/Auth.jsx'
   },
 
   output: {

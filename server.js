@@ -8,8 +8,9 @@ var http = require('http');
 var passport = require('passport');
 
 var routes = require('./src/server/routes/index');
+var auth = require('./src/server/routes/auth');
 //var users = require('./routes/users');
-//var auth = require('./routes/auth');
+
 
 var config = require('./src/server/config')();
 //var db = require('./models');
@@ -33,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'src/client/public')));
 //require('./config/passport')(passport);
 
 app.use('/', routes);
-//app.use('/auth', auth);
+app.use('/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

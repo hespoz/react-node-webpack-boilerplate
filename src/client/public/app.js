@@ -42,9 +42,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!*********************************************!*\
-  !*** ./src/client/app/components/login.jsx ***!
-  \*********************************************/
+/*!********************************************!*\
+  !*** ./src/client/app/components/Auth.jsx ***!
+  \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59,6 +59,26 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 161);
 	
+	var _Button = __webpack_require__(/*! react-bootstrap/lib/Button */ 218);
+	
+	var _Button2 = _interopRequireDefault(_Button);
+	
+	var _Grid = __webpack_require__(/*! react-bootstrap/lib/Grid */ 247);
+	
+	var _Grid2 = _interopRequireDefault(_Grid);
+	
+	var _Row = __webpack_require__(/*! react-bootstrap/lib/Row */ 248);
+	
+	var _Row2 = _interopRequireDefault(_Row);
+	
+	var _Col = __webpack_require__(/*! react-bootstrap/lib/Col */ 249);
+	
+	var _Col2 = _interopRequireDefault(_Col);
+	
+	var _Input = __webpack_require__(/*! react-bootstrap/lib/Input */ 250);
+	
+	var _Input2 = _interopRequireDefault(_Input);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -67,73 +87,230 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	//import Button from 'react-bootstrap/lib/Button';
+	var gridInstance = _react2.default.createElement(
+		'div',
+		{ 'class': 'text-center' },
+		_react2.default.createElement(
+			_Grid2.default,
+			{ mdOffset: 4 },
+			_react2.default.createElement(
+				_Row2.default,
+				null,
+				_react2.default.createElement(
+					_Col2.default,
+					{ mdOffset: 4, md: 12 },
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(
+								'h1',
+								null,
+								'Login'
+							)
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(_Input2.default, { type: 'text', label: 'Email', placeholder: 'Email' })
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(_Input2.default, { type: 'password', label: 'Password' })
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							'Dont have an account? Please ',
+							_react2.default.createElement(
+								_reactRouter.Link,
+								{ to: '/signup' },
+								'Signup'
+							)
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(
+								_Button2.default,
+								{ bsSize: 'large', block: true },
+								'Login'
+							)
+						)
+					)
+				)
+			)
+		)
+	);
 	
-	/*class App extends React.Component {
-	  render () {
-	    return  (
-	  	  <div>
-			<Button>Default</Button>
-	      </div>
-	    );
-	  }
-	}*/
+	var signUpInstance = _react2.default.createElement(
+		'div',
+		{ 'class': 'text-center' },
+		_react2.default.createElement(
+			_Grid2.default,
+			{ mdOffset: 4 },
+			_react2.default.createElement(
+				_Row2.default,
+				null,
+				_react2.default.createElement(
+					_Col2.default,
+					{ mdOffset: 4, md: 12 },
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(
+								'h1',
+								null,
+								'Login'
+							)
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(_Input2.default, { type: 'text', label: 'Name', placeholder: 'Name' })
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(_Input2.default, { type: 'text', label: 'Lastname', placeholder: 'Last name' })
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(_Input2.default, { type: 'text', label: 'Email', placeholder: 'Email' })
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(_Input2.default, { type: 'password', label: 'Password' })
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(_Input2.default, { type: 'password', label: 'Repeat password' })
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							'Already have an account? Please ',
+							_react2.default.createElement(
+								_reactRouter.Link,
+								{ to: '/' },
+								'Login'
+							)
+						)
+					),
+					_react2.default.createElement(
+						_Row2.default,
+						null,
+						_react2.default.createElement(
+							_Col2.default,
+							{ md: 4 },
+							_react2.default.createElement(
+								_Button2.default,
+								{ bsSize: 'large', block: true },
+								'Sign Up'
+							)
+						)
+					)
+				)
+			)
+		)
+	);
 	
-	var Home = function (_React$Component) {
-	  _inherits(Home, _React$Component);
+	var Login = function (_React$Component) {
+		_inherits(Login, _React$Component);
 	
-	  function Home() {
-	    _classCallCheck(this, Home);
+		function Login() {
+			_classCallCheck(this, Login);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Home).apply(this, arguments));
-	  }
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Login).apply(this, arguments));
+		}
 	
-	  _createClass(Home, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'h1',
-	        null,
-	        'Welcome to the Home Page'
-	      );
-	    }
-	  }]);
+		_createClass(Login, [{
+			key: 'render',
+			value: function render() {
+				return gridInstance;
+			}
+		}]);
 	
-	  return Home;
+		return Login;
 	}(_react2.default.Component);
 	
 	;
 	
-	var Register = function (_React$Component2) {
-	  _inherits(Register, _React$Component2);
+	var SignUp = function (_React$Component2) {
+		_inherits(SignUp, _React$Component2);
 	
-	  function Register() {
-	    _classCallCheck(this, Register);
+		function SignUp() {
+			_classCallCheck(this, SignUp);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Register).apply(this, arguments));
-	  }
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(SignUp).apply(this, arguments));
+		}
 	
-	  _createClass(Register, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'h1',
-	        null,
-	        'Register'
-	      );
-	    }
-	  }]);
+		_createClass(SignUp, [{
+			key: 'render',
+			value: function render() {
+				return signUpInstance;
+			}
+		}]);
 	
-	  return Register;
+		return SignUp;
 	}(_react2.default.Component);
 	
 	;
 	
 	_react2.default.render(_react2.default.createElement(
-	  _reactRouter.Router,
-	  null,
-	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: Home }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/signup', component: Register })
+		_reactRouter.Router,
+		null,
+		_react2.default.createElement(_reactRouter.Route, { path: '/', component: Login }),
+		_react2.default.createElement(_reactRouter.Route, { path: '/signup', component: SignUp })
 	), document.getElementById('app'));
 
 /***/ },
@@ -25446,6 +25623,2251 @@
 	
 	exports['default'] = _createRouterHistory2['default'](_historyLibCreateHashHistory2['default']);
 	module.exports = exports['default'];
+
+/***/ },
+/* 218 */
+/*!*****************************************!*\
+  !*** ./~/react-bootstrap/lib/Button.js ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _extends = __webpack_require__(/*! babel-runtime/helpers/extends */ 219)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(/*! classnames */ 236);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _reactPropTypesLibElementType = __webpack_require__(/*! react-prop-types/lib/elementType */ 237);
+	
+	var _reactPropTypesLibElementType2 = _interopRequireDefault(_reactPropTypesLibElementType);
+	
+	var _utilsBootstrapUtils = __webpack_require__(/*! ./utils/bootstrapUtils */ 239);
+	
+	var _utilsBootstrapUtils2 = _interopRequireDefault(_utilsBootstrapUtils);
+	
+	var _styleMaps = __webpack_require__(/*! ./styleMaps */ 240);
+	
+	var types = ['button', 'reset', 'submit'];
+	
+	var ButtonStyles = _styleMaps.State.values().concat(_styleMaps.DEFAULT, _styleMaps.PRIMARY, _styleMaps.LINK);
+	
+	var Button = _react2['default'].createClass({
+	  displayName: 'Button',
+	
+	  propTypes: {
+	    active: _react2['default'].PropTypes.bool,
+	    disabled: _react2['default'].PropTypes.bool,
+	    block: _react2['default'].PropTypes.bool,
+	    navItem: _react2['default'].PropTypes.bool,
+	    navDropdown: _react2['default'].PropTypes.bool,
+	    /**
+	     * You can use a custom element for this component
+	     */
+	    componentClass: _reactPropTypesLibElementType2['default'],
+	    href: _react2['default'].PropTypes.string,
+	    target: _react2['default'].PropTypes.string,
+	    /**
+	     * Defines HTML button type Attribute
+	     * @type {("button"|"reset"|"submit")}
+	     * @defaultValue 'button'
+	     */
+	    type: _react2['default'].PropTypes.oneOf(types)
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      active: false,
+	      block: false,
+	      disabled: false,
+	      navItem: false,
+	      navDropdown: false
+	    };
+	  },
+	
+	  render: function render() {
+	    var _extends2;
+	
+	    var classes = this.props.navDropdown ? {} : _utilsBootstrapUtils2['default'].getClassSet(this.props);
+	    var renderFuncName = undefined;
+	
+	    var blockClass = _utilsBootstrapUtils2['default'].prefix(this.props, 'block');
+	
+	    classes = _extends((_extends2 = {
+	      active: this.props.active
+	    }, _extends2[blockClass] = this.props.block, _extends2), classes);
+	
+	    if (this.props.navItem) {
+	      return this.renderNavItem(classes);
+	    }
+	
+	    renderFuncName = this.props.href || this.props.target || this.props.navDropdown ? 'renderAnchor' : 'renderButton';
+	
+	    return this[renderFuncName](classes);
+	  },
+	
+	  renderAnchor: function renderAnchor(classes) {
+	    var Component = this.props.componentClass || 'a';
+	    var href = this.props.href || '#';
+	    classes.disabled = this.props.disabled;
+	
+	    return _react2['default'].createElement(
+	      Component,
+	      _extends({}, this.props, {
+	        href: href,
+	        className: _classnames2['default'](this.props.className, classes),
+	        role: 'button' }),
+	      this.props.children
+	    );
+	  },
+	
+	  renderButton: function renderButton(classes) {
+	    var Component = this.props.componentClass || 'button';
+	
+	    return _react2['default'].createElement(
+	      Component,
+	      _extends({}, this.props, {
+	        type: this.props.type || 'button',
+	        className: _classnames2['default'](this.props.className, classes) }),
+	      this.props.children
+	    );
+	  },
+	
+	  renderNavItem: function renderNavItem(classes) {
+	    var liClasses = {
+	      active: this.props.active
+	    };
+	
+	    return _react2['default'].createElement(
+	      'li',
+	      { className: _classnames2['default'](liClasses) },
+	      this.renderAnchor(classes)
+	    );
+	  }
+	});
+	
+	Button.types = types;
+	
+	exports['default'] = _utilsBootstrapUtils.bsStyles(ButtonStyles, _styleMaps.DEFAULT, _utilsBootstrapUtils.bsSizes([_styleMaps.Sizes.LARGE, _styleMaps.Sizes.SMALL, _styleMaps.Sizes.XSMALL], _utilsBootstrapUtils.bsClass('btn', Button)));
+	module.exports = exports['default'];
+
+/***/ },
+/* 219 */
+/*!********************************************!*\
+  !*** ./~/babel-runtime/helpers/extends.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _Object$assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 220)["default"];
+	
+	exports["default"] = _Object$assign || function (target) {
+	  for (var i = 1; i < arguments.length; i++) {
+	    var source = arguments[i];
+	
+	    for (var key in source) {
+	      if (Object.prototype.hasOwnProperty.call(source, key)) {
+	        target[key] = source[key];
+	      }
+	    }
+	  }
+	
+	  return target;
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 220 */
+/*!**************************************************!*\
+  !*** ./~/babel-runtime/core-js/object/assign.js ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/assign */ 221), __esModule: true };
+
+/***/ },
+/* 221 */
+/*!***********************************************!*\
+  !*** ./~/core-js/library/fn/object/assign.js ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(/*! ../../modules/es6.object.assign */ 222);
+	module.exports = __webpack_require__(/*! ../../modules/$.core */ 225).Object.assign;
+
+/***/ },
+/* 222 */
+/*!********************************************************!*\
+  !*** ./~/core-js/library/modules/es6.object.assign.js ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.1 Object.assign(target, source)
+	var $export = __webpack_require__(/*! ./$.export */ 223);
+	
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(/*! ./$.object-assign */ 228)});
+
+/***/ },
+/* 223 */
+/*!***********************************************!*\
+  !*** ./~/core-js/library/modules/$.export.js ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var global    = __webpack_require__(/*! ./$.global */ 224)
+	  , core      = __webpack_require__(/*! ./$.core */ 225)
+	  , ctx       = __webpack_require__(/*! ./$.ctx */ 226)
+	  , PROTOTYPE = 'prototype';
+	
+	var $export = function(type, name, source){
+	  var IS_FORCED = type & $export.F
+	    , IS_GLOBAL = type & $export.G
+	    , IS_STATIC = type & $export.S
+	    , IS_PROTO  = type & $export.P
+	    , IS_BIND   = type & $export.B
+	    , IS_WRAP   = type & $export.W
+	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
+	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
+	    , key, own, out;
+	  if(IS_GLOBAL)source = name;
+	  for(key in source){
+	    // contains in native
+	    own = !IS_FORCED && target && key in target;
+	    if(own && key in exports)continue;
+	    // export native or passed
+	    out = own ? target[key] : source[key];
+	    // prevent global pollution for namespaces
+	    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
+	    // bind timers to global for call from export context
+	    : IS_BIND && own ? ctx(out, global)
+	    // wrap global constructors for prevent change them in library
+	    : IS_WRAP && target[key] == out ? (function(C){
+	      var F = function(param){
+	        return this instanceof C ? new C(param) : C(param);
+	      };
+	      F[PROTOTYPE] = C[PROTOTYPE];
+	      return F;
+	    // make static versions for prototype methods
+	    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+	    if(IS_PROTO)(exports[PROTOTYPE] || (exports[PROTOTYPE] = {}))[key] = out;
+	  }
+	};
+	// type bitmap
+	$export.F = 1;  // forced
+	$export.G = 2;  // global
+	$export.S = 4;  // static
+	$export.P = 8;  // proto
+	$export.B = 16; // bind
+	$export.W = 32; // wrap
+	module.exports = $export;
+
+/***/ },
+/* 224 */
+/*!***********************************************!*\
+  !*** ./~/core-js/library/modules/$.global.js ***!
+  \***********************************************/
+/***/ function(module, exports) {
+
+	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+	var global = module.exports = typeof window != 'undefined' && window.Math == Math
+	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
+
+/***/ },
+/* 225 */
+/*!*********************************************!*\
+  !*** ./~/core-js/library/modules/$.core.js ***!
+  \*********************************************/
+/***/ function(module, exports) {
+
+	var core = module.exports = {version: '1.2.6'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+
+/***/ },
+/* 226 */
+/*!********************************************!*\
+  !*** ./~/core-js/library/modules/$.ctx.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// optional / simple context binding
+	var aFunction = __webpack_require__(/*! ./$.a-function */ 227);
+	module.exports = function(fn, that, length){
+	  aFunction(fn);
+	  if(that === undefined)return fn;
+	  switch(length){
+	    case 1: return function(a){
+	      return fn.call(that, a);
+	    };
+	    case 2: return function(a, b){
+	      return fn.call(that, a, b);
+	    };
+	    case 3: return function(a, b, c){
+	      return fn.call(that, a, b, c);
+	    };
+	  }
+	  return function(/* ...args */){
+	    return fn.apply(that, arguments);
+	  };
+	};
+
+/***/ },
+/* 227 */
+/*!***************************************************!*\
+  !*** ./~/core-js/library/modules/$.a-function.js ***!
+  \***************************************************/
+/***/ function(module, exports) {
+
+	module.exports = function(it){
+	  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
+	  return it;
+	};
+
+/***/ },
+/* 228 */
+/*!******************************************************!*\
+  !*** ./~/core-js/library/modules/$.object-assign.js ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.1 Object.assign(target, source, ...)
+	var $        = __webpack_require__(/*! ./$ */ 229)
+	  , toObject = __webpack_require__(/*! ./$.to-object */ 230)
+	  , IObject  = __webpack_require__(/*! ./$.iobject */ 232);
+	
+	// should work with symbols and should have deterministic property order (V8 bug)
+	module.exports = __webpack_require__(/*! ./$.fails */ 234)(function(){
+	  var a = Object.assign
+	    , A = {}
+	    , B = {}
+	    , S = Symbol()
+	    , K = 'abcdefghijklmnopqrst';
+	  A[S] = 7;
+	  K.split('').forEach(function(k){ B[k] = k; });
+	  return a({}, A)[S] != 7 || Object.keys(a({}, B)).join('') != K;
+	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
+	  var T     = toObject(target)
+	    , $$    = arguments
+	    , $$len = $$.length
+	    , index = 1
+	    , getKeys    = $.getKeys
+	    , getSymbols = $.getSymbols
+	    , isEnum     = $.isEnum;
+	  while($$len > index){
+	    var S      = IObject($$[index++])
+	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
+	      , length = keys.length
+	      , j      = 0
+	      , key;
+	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
+	  }
+	  return T;
+	} : Object.assign;
+
+/***/ },
+/* 229 */
+/*!****************************************!*\
+  !*** ./~/core-js/library/modules/$.js ***!
+  \****************************************/
+/***/ function(module, exports) {
+
+	var $Object = Object;
+	module.exports = {
+	  create:     $Object.create,
+	  getProto:   $Object.getPrototypeOf,
+	  isEnum:     {}.propertyIsEnumerable,
+	  getDesc:    $Object.getOwnPropertyDescriptor,
+	  setDesc:    $Object.defineProperty,
+	  setDescs:   $Object.defineProperties,
+	  getKeys:    $Object.keys,
+	  getNames:   $Object.getOwnPropertyNames,
+	  getSymbols: $Object.getOwnPropertySymbols,
+	  each:       [].forEach
+	};
+
+/***/ },
+/* 230 */
+/*!**************************************************!*\
+  !*** ./~/core-js/library/modules/$.to-object.js ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.1.13 ToObject(argument)
+	var defined = __webpack_require__(/*! ./$.defined */ 231);
+	module.exports = function(it){
+	  return Object(defined(it));
+	};
+
+/***/ },
+/* 231 */
+/*!************************************************!*\
+  !*** ./~/core-js/library/modules/$.defined.js ***!
+  \************************************************/
+/***/ function(module, exports) {
+
+	// 7.2.1 RequireObjectCoercible(argument)
+	module.exports = function(it){
+	  if(it == undefined)throw TypeError("Can't call method on  " + it);
+	  return it;
+	};
+
+/***/ },
+/* 232 */
+/*!************************************************!*\
+  !*** ./~/core-js/library/modules/$.iobject.js ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// fallback for non-array-like ES3 and non-enumerable old V8 strings
+	var cof = __webpack_require__(/*! ./$.cof */ 233);
+	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
+	  return cof(it) == 'String' ? it.split('') : Object(it);
+	};
+
+/***/ },
+/* 233 */
+/*!********************************************!*\
+  !*** ./~/core-js/library/modules/$.cof.js ***!
+  \********************************************/
+/***/ function(module, exports) {
+
+	var toString = {}.toString;
+	
+	module.exports = function(it){
+	  return toString.call(it).slice(8, -1);
+	};
+
+/***/ },
+/* 234 */
+/*!**********************************************!*\
+  !*** ./~/core-js/library/modules/$.fails.js ***!
+  \**********************************************/
+/***/ function(module, exports) {
+
+	module.exports = function(exec){
+	  try {
+	    return !!exec();
+	  } catch(e){
+	    return true;
+	  }
+	};
+
+/***/ },
+/* 235 */
+/*!************************************************************!*\
+  !*** ./~/babel-runtime/helpers/interop-require-default.js ***!
+  \************************************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	exports["default"] = function (obj) {
+	  return obj && obj.__esModule ? obj : {
+	    "default": obj
+	  };
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 236 */
+/*!*******************************!*\
+  !*** ./~/classnames/index.js ***!
+  \*******************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2016 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	/* global define */
+	
+	(function () {
+		'use strict';
+	
+		var hasOwn = {}.hasOwnProperty;
+	
+		function classNames () {
+			var classes = [];
+	
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+	
+				var argType = typeof arg;
+	
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
+				} else if (Array.isArray(arg)) {
+					classes.push(classNames.apply(null, arg));
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
+						}
+					}
+				}
+			}
+	
+			return classes.join(' ');
+		}
+	
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if (true) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	}());
+
+
+/***/ },
+/* 237 */
+/*!***********************************************!*\
+  !*** ./~/react-prop-types/lib/elementType.js ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	exports.__esModule = true;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _common = __webpack_require__(/*! ./common */ 238);
+	
+	/**
+	 * Checks whether a prop provides a type of element.
+	 *
+	 * The type of element can be provided in two forms:
+	 * - tag name (string)
+	 * - a return value of React.createClass(...)
+	 *
+	 * @param props
+	 * @param propName
+	 * @param componentName
+	 * @returns {Error|undefined}
+	 */
+	
+	function validate(props, propName, componentName) {
+	  var errBeginning = _common.errMsg(props, propName, componentName, '. Expected an Element `type`');
+	
+	  if (typeof props[propName] !== 'function') {
+	    if (_react2['default'].isValidElement(props[propName])) {
+	      return new Error(errBeginning + ', not an actual Element');
+	    }
+	
+	    if (typeof props[propName] !== 'string') {
+	      return new Error(errBeginning + ' such as a tag name or return value of React.createClass(...)');
+	    }
+	  }
+	}
+	
+	exports['default'] = _common.createChainableTypeChecker(validate);
+	module.exports = exports['default'];
+
+/***/ },
+/* 238 */
+/*!******************************************!*\
+  !*** ./~/react-prop-types/lib/common.js ***!
+  \******************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	exports.__esModule = true;
+	exports.errMsg = errMsg;
+	exports.createChainableTypeChecker = createChainableTypeChecker;
+	
+	function errMsg(props, propName, componentName, msgContinuation) {
+	  return 'Invalid prop \'' + propName + '\' of value \'' + props[propName] + '\'' + (' supplied to \'' + componentName + '\'' + msgContinuation);
+	}
+	
+	/**
+	 * Create chain-able isRequired validator
+	 *
+	 * Largely copied directly from:
+	 *  https://github.com/facebook/react/blob/0.11-stable/src/core/ReactPropTypes.js#L94
+	 */
+	
+	function createChainableTypeChecker(validate) {
+	  function checkType(isRequired, props, propName, componentName) {
+	    componentName = componentName || '<<anonymous>>';
+	    if (props[propName] == null) {
+	      if (isRequired) {
+	        return new Error('Required prop \'' + propName + '\' was not specified in \'' + componentName + '\'.');
+	      }
+	    } else {
+	      return validate(props, propName, componentName);
+	    }
+	  }
+	
+	  var chainedCheckType = checkType.bind(null, false);
+	  chainedCheckType.isRequired = checkType.bind(null, true);
+	
+	  return chainedCheckType;
+	}
+
+/***/ },
+/* 239 */
+/*!*******************************************************!*\
+  !*** ./~/react-bootstrap/lib/utils/bootstrapUtils.js ***!
+  \*******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+	
+	var _extends = __webpack_require__(/*! babel-runtime/helpers/extends */ 219)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _styleMaps = __webpack_require__(/*! ../styleMaps */ 240);
+	
+	var _styleMaps2 = _interopRequireDefault(_styleMaps);
+	
+	var _invariant = __webpack_require__(/*! invariant */ 165);
+	
+	var _invariant2 = _interopRequireDefault(_invariant);
+	
+	var _warning = __webpack_require__(/*! warning */ 164);
+	
+	var _warning2 = _interopRequireDefault(_warning);
+	
+	function curry(fn) {
+	  return function () {
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    var last = args[args.length - 1];
+	    if (typeof last === 'function') {
+	      return fn.apply(undefined, args);
+	    }
+	    return function (Component) {
+	      return fn.apply(undefined, args.concat([Component]));
+	    };
+	  };
+	}
+	
+	function prefix(props, variant) {
+	  if (props === undefined) props = {};
+	
+	  !(props.bsClass || '').trim() ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'A `bsClass` prop is required for this component') : _invariant2['default'](false) : undefined;
+	  return props.bsClass + (variant ? '-' + variant : '');
+	}
+	
+	var bsClass = curry(function (defaultClass, Component) {
+	  var propTypes = Component.propTypes || (Component.propTypes = {});
+	  var defaultProps = Component.defaultProps || (Component.defaultProps = {});
+	
+	  propTypes.bsClass = _react.PropTypes.string;
+	  defaultProps.bsClass = defaultClass;
+	
+	  return Component;
+	});
+	
+	exports.bsClass = bsClass;
+	var bsStyles = curry(function (styles, defaultStyle, Component) {
+	  if (typeof defaultStyle !== 'string') {
+	    Component = defaultStyle;
+	    defaultStyle = undefined;
+	  }
+	
+	  var existing = Component.STYLES || [];
+	  var propTypes = Component.propTypes || {};
+	
+	  styles.forEach(function (style) {
+	    if (existing.indexOf(style) === -1) {
+	      existing.push(style);
+	    }
+	  });
+	
+	  var propType = _react.PropTypes.oneOf(existing);
+	
+	  // expose the values on the propType function for documentation
+	  Component.STYLES = propType._values = existing;
+	
+	  Component.propTypes = _extends({}, propTypes, {
+	    bsStyle: propType
+	  });
+	
+	  if (defaultStyle !== undefined) {
+	    var defaultProps = Component.defaultProps || (Component.defaultProps = {});
+	    defaultProps.bsStyle = defaultStyle;
+	  }
+	
+	  return Component;
+	});
+	
+	exports.bsStyles = bsStyles;
+	var bsSizes = curry(function (sizes, defaultSize, Component) {
+	  if (typeof defaultSize !== 'string') {
+	    Component = defaultSize;
+	    defaultSize = undefined;
+	  }
+	
+	  var existing = Component.SIZES || [];
+	  var propTypes = Component.propTypes || {};
+	
+	  sizes.forEach(function (size) {
+	    if (existing.indexOf(size) === -1) {
+	      existing.push(size);
+	    }
+	  });
+	
+	  var values = existing.reduce(function (result, size) {
+	    if (_styleMaps2['default'].SIZES[size] && _styleMaps2['default'].SIZES[size] !== size) {
+	      result.push(_styleMaps2['default'].SIZES[size]);
+	    }
+	    return result.concat(size);
+	  }, []);
+	
+	  var propType = _react.PropTypes.oneOf(values);
+	
+	  propType._values = values;
+	
+	  // expose the values on the propType function for documentation
+	  Component.SIZES = existing;
+	
+	  Component.propTypes = _extends({}, propTypes, {
+	    bsSize: propType
+	  });
+	
+	  if (defaultSize !== undefined) {
+	    var defaultProps = Component.defaultProps || (Component.defaultProps = {});
+	    defaultProps.bsSize = defaultSize;
+	  }
+	
+	  return Component;
+	});
+	
+	exports.bsSizes = bsSizes;
+	exports['default'] = {
+	
+	  prefix: prefix,
+	
+	  getClassSet: function getClassSet(props) {
+	    var classes = {};
+	    var bsClassName = prefix(props);
+	
+	    if (bsClassName) {
+	      var bsSize = undefined;
+	
+	      classes[bsClassName] = true;
+	
+	      if (props.bsSize) {
+	        bsSize = _styleMaps2['default'].SIZES[props.bsSize] || bsSize;
+	      }
+	
+	      if (bsSize) {
+	        classes[prefix(props, bsSize)] = true;
+	      }
+	
+	      if (props.bsStyle) {
+	        if (props.bsStyle.indexOf(prefix(props)) === 0) {
+	          process.env.NODE_ENV !== 'production' ? _warning2['default'](false, // small migration convenience, since the old method required manual prefixing
+	          'bsStyle will automatically prefix custom values with the bsClass, so there is no ' + 'need to append it manually. (bsStyle: ' + props.bsStyle + ', bsClass: ' + prefix(props) + ')') : undefined;
+	          classes[props.bsStyle] = true;
+	        } else {
+	          classes[prefix(props, props.bsStyle)] = true;
+	        }
+	      }
+	    }
+	
+	    return classes;
+	  },
+	
+	  /**
+	   * Add a style variant to a Component. Mutates the propTypes of the component
+	   * in order to validate the new variant.
+	   */
+	  addStyle: function addStyle(Component, styleVariant) {
+	    bsStyles(styleVariant, Component);
+	  }
+	};
+	var _curry = curry;
+	exports._curry = _curry;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 5)))
+
+/***/ },
+/* 240 */
+/*!********************************************!*\
+  !*** ./~/react-bootstrap/lib/styleMaps.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _Object$assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 220)['default'];
+	
+	var _Object$create = __webpack_require__(/*! babel-runtime/core-js/object/create */ 241)['default'];
+	
+	var _Object$keys = __webpack_require__(/*! babel-runtime/core-js/object/keys */ 243)['default'];
+	
+	exports.__esModule = true;
+	
+	var constant = function constant(obj) {
+	  return _Object$assign(_Object$create({
+	    values: function values() {
+	      var _this = this;
+	
+	      return _Object$keys(this).map(function (k) {
+	        return _this[k];
+	      });
+	    }
+	  }), obj);
+	};
+	
+	var styleMaps = {
+	
+	  SIZES: {
+	    'large': 'lg',
+	    'medium': 'md',
+	    'small': 'sm',
+	    'xsmall': 'xs',
+	    'lg': 'lg',
+	    'md': 'md',
+	    'sm': 'sm',
+	    'xs': 'xs'
+	  },
+	  GRID_COLUMNS: 12
+	};
+	
+	var Sizes = constant({
+	  LARGE: 'large',
+	  MEDIUM: 'medium',
+	  SMALL: 'small',
+	  XSMALL: 'xsmall'
+	});
+	
+	exports.Sizes = Sizes;
+	var State = constant({
+	  SUCCESS: 'success',
+	  WARNING: 'warning',
+	  DANGER: 'danger',
+	  INFO: 'info'
+	});
+	
+	exports.State = State;
+	var DEFAULT = 'default';
+	exports.DEFAULT = DEFAULT;
+	var PRIMARY = 'primary';
+	exports.PRIMARY = PRIMARY;
+	var LINK = 'link';
+	exports.LINK = LINK;
+	var INVERSE = 'inverse';
+	
+	exports.INVERSE = INVERSE;
+	exports['default'] = styleMaps;
+
+/***/ },
+/* 241 */
+/*!**************************************************!*\
+  !*** ./~/babel-runtime/core-js/object/create.js ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/create */ 242), __esModule: true };
+
+/***/ },
+/* 242 */
+/*!***********************************************!*\
+  !*** ./~/core-js/library/fn/object/create.js ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(/*! ../../modules/$ */ 229);
+	module.exports = function create(P, D){
+	  return $.create(P, D);
+	};
+
+/***/ },
+/* 243 */
+/*!************************************************!*\
+  !*** ./~/babel-runtime/core-js/object/keys.js ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/keys */ 244), __esModule: true };
+
+/***/ },
+/* 244 */
+/*!*********************************************!*\
+  !*** ./~/core-js/library/fn/object/keys.js ***!
+  \*********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(/*! ../../modules/es6.object.keys */ 245);
+	module.exports = __webpack_require__(/*! ../../modules/$.core */ 225).Object.keys;
+
+/***/ },
+/* 245 */
+/*!******************************************************!*\
+  !*** ./~/core-js/library/modules/es6.object.keys.js ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.14 Object.keys(O)
+	var toObject = __webpack_require__(/*! ./$.to-object */ 230);
+	
+	__webpack_require__(/*! ./$.object-sap */ 246)('keys', function($keys){
+	  return function keys(it){
+	    return $keys(toObject(it));
+	  };
+	});
+
+/***/ },
+/* 246 */
+/*!***************************************************!*\
+  !*** ./~/core-js/library/modules/$.object-sap.js ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// most Object methods by ES6 should accept primitives
+	var $export = __webpack_require__(/*! ./$.export */ 223)
+	  , core    = __webpack_require__(/*! ./$.core */ 225)
+	  , fails   = __webpack_require__(/*! ./$.fails */ 234);
+	module.exports = function(KEY, exec){
+	  var fn  = (core.Object || {})[KEY] || Object[KEY]
+	    , exp = {};
+	  exp[KEY] = exec(fn);
+	  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
+	};
+
+/***/ },
+/* 247 */
+/*!***************************************!*\
+  !*** ./~/react-bootstrap/lib/Grid.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _extends = __webpack_require__(/*! babel-runtime/helpers/extends */ 219)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(/*! classnames */ 236);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _reactPropTypesLibElementType = __webpack_require__(/*! react-prop-types/lib/elementType */ 237);
+	
+	var _reactPropTypesLibElementType2 = _interopRequireDefault(_reactPropTypesLibElementType);
+	
+	var Grid = _react2['default'].createClass({
+	  displayName: 'Grid',
+	
+	  propTypes: {
+	    /**
+	     * Turn any fixed-width grid layout into a full-width layout by this property.
+	     *
+	     * Adds `container-fluid` class.
+	     */
+	    fluid: _react2['default'].PropTypes.bool,
+	    /**
+	     * You can use a custom element for this component
+	     */
+	    componentClass: _reactPropTypesLibElementType2['default']
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      componentClass: 'div',
+	      fluid: false
+	    };
+	  },
+	
+	  render: function render() {
+	    var ComponentClass = this.props.componentClass;
+	    var className = this.props.fluid ? 'container-fluid' : 'container';
+	
+	    return _react2['default'].createElement(
+	      ComponentClass,
+	      _extends({}, this.props, {
+	        className: _classnames2['default'](this.props.className, className) }),
+	      this.props.children
+	    );
+	  }
+	});
+	
+	exports['default'] = Grid;
+	module.exports = exports['default'];
+
+/***/ },
+/* 248 */
+/*!**************************************!*\
+  !*** ./~/react-bootstrap/lib/Row.js ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _extends = __webpack_require__(/*! babel-runtime/helpers/extends */ 219)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(/*! classnames */ 236);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _reactPropTypesLibElementType = __webpack_require__(/*! react-prop-types/lib/elementType */ 237);
+	
+	var _reactPropTypesLibElementType2 = _interopRequireDefault(_reactPropTypesLibElementType);
+	
+	var Row = _react2['default'].createClass({
+	  displayName: 'Row',
+	
+	  propTypes: {
+	    /**
+	     * You can use a custom element for this component
+	     */
+	    componentClass: _reactPropTypesLibElementType2['default']
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      componentClass: 'div'
+	    };
+	  },
+	
+	  render: function render() {
+	    var ComponentClass = this.props.componentClass;
+	
+	    return _react2['default'].createElement(
+	      ComponentClass,
+	      _extends({}, this.props, { className: _classnames2['default'](this.props.className, 'row') }),
+	      this.props.children
+	    );
+	  }
+	});
+	
+	exports['default'] = Row;
+	module.exports = exports['default'];
+
+/***/ },
+/* 249 */
+/*!**************************************!*\
+  !*** ./~/react-bootstrap/lib/Col.js ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _extends = __webpack_require__(/*! babel-runtime/helpers/extends */ 219)['default'];
+	
+	var _Object$keys = __webpack_require__(/*! babel-runtime/core-js/object/keys */ 243)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(/*! classnames */ 236);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _styleMaps = __webpack_require__(/*! ./styleMaps */ 240);
+	
+	var _styleMaps2 = _interopRequireDefault(_styleMaps);
+	
+	var _reactPropTypesLibElementType = __webpack_require__(/*! react-prop-types/lib/elementType */ 237);
+	
+	var _reactPropTypesLibElementType2 = _interopRequireDefault(_reactPropTypesLibElementType);
+	
+	var Col = _react2['default'].createClass({
+	  displayName: 'Col',
+	
+	  propTypes: {
+	    /**
+	     * The number of columns you wish to span
+	     *
+	     * for Extra small devices Phones (<768px)
+	     *
+	     * class-prefix `col-xs-`
+	     */
+	    xs: _react2['default'].PropTypes.number,
+	    /**
+	     * The number of columns you wish to span
+	     *
+	     * for Small devices Tablets (≥768px)
+	     *
+	     * class-prefix `col-sm-`
+	     */
+	    sm: _react2['default'].PropTypes.number,
+	    /**
+	     * The number of columns you wish to span
+	     *
+	     * for Medium devices Desktops (≥992px)
+	     *
+	     * class-prefix `col-md-`
+	     */
+	    md: _react2['default'].PropTypes.number,
+	    /**
+	     * The number of columns you wish to span
+	     *
+	     * for Large devices Desktops (≥1200px)
+	     *
+	     * class-prefix `col-lg-`
+	     */
+	    lg: _react2['default'].PropTypes.number,
+	    /**
+	     * Hide column
+	     *
+	     * on Extra small devices Phones
+	     *
+	     * adds class `hidden-xs`
+	     */
+	    xsHidden: _react2['default'].PropTypes.bool,
+	    /**
+	     * Hide column
+	     *
+	     * on Small devices Tablets
+	     *
+	     * adds class `hidden-sm`
+	     */
+	    smHidden: _react2['default'].PropTypes.bool,
+	    /**
+	     * Hide column
+	     *
+	     * on Medium devices Desktops
+	     *
+	     * adds class `hidden-md`
+	     */
+	    mdHidden: _react2['default'].PropTypes.bool,
+	    /**
+	     * Hide column
+	     *
+	     * on Large devices Desktops
+	     *
+	     * adds class `hidden-lg`
+	     */
+	    lgHidden: _react2['default'].PropTypes.bool,
+	    /**
+	     * Move columns to the right
+	     *
+	     * for Extra small devices Phones
+	     *
+	     * class-prefix `col-xs-offset-`
+	     */
+	    xsOffset: _react2['default'].PropTypes.number,
+	    /**
+	     * Move columns to the right
+	     *
+	     * for Small devices Tablets
+	     *
+	     * class-prefix `col-sm-offset-`
+	     */
+	    smOffset: _react2['default'].PropTypes.number,
+	    /**
+	     * Move columns to the right
+	     *
+	     * for Medium devices Desktops
+	     *
+	     * class-prefix `col-md-offset-`
+	     */
+	    mdOffset: _react2['default'].PropTypes.number,
+	    /**
+	     * Move columns to the right
+	     *
+	     * for Large devices Desktops
+	     *
+	     * class-prefix `col-lg-offset-`
+	     */
+	    lgOffset: _react2['default'].PropTypes.number,
+	    /**
+	     * Change the order of grid columns to the right
+	     *
+	     * for Extra small devices Phones
+	     *
+	     * class-prefix `col-xs-push-`
+	     */
+	    xsPush: _react2['default'].PropTypes.number,
+	    /**
+	     * Change the order of grid columns to the right
+	     *
+	     * for Small devices Tablets
+	     *
+	     * class-prefix `col-sm-push-`
+	     */
+	    smPush: _react2['default'].PropTypes.number,
+	    /**
+	     * Change the order of grid columns to the right
+	     *
+	     * for Medium devices Desktops
+	     *
+	     * class-prefix `col-md-push-`
+	     */
+	    mdPush: _react2['default'].PropTypes.number,
+	    /**
+	     * Change the order of grid columns to the right
+	     *
+	     * for Large devices Desktops
+	     *
+	     * class-prefix `col-lg-push-`
+	     */
+	    lgPush: _react2['default'].PropTypes.number,
+	    /**
+	     * Change the order of grid columns to the left
+	     *
+	     * for Extra small devices Phones
+	     *
+	     * class-prefix `col-xs-pull-`
+	     */
+	    xsPull: _react2['default'].PropTypes.number,
+	    /**
+	     * Change the order of grid columns to the left
+	     *
+	     * for Small devices Tablets
+	     *
+	     * class-prefix `col-sm-pull-`
+	     */
+	    smPull: _react2['default'].PropTypes.number,
+	    /**
+	     * Change the order of grid columns to the left
+	     *
+	     * for Medium devices Desktops
+	     *
+	     * class-prefix `col-md-pull-`
+	     */
+	    mdPull: _react2['default'].PropTypes.number,
+	    /**
+	     * Change the order of grid columns to the left
+	     *
+	     * for Large devices Desktops
+	     *
+	     * class-prefix `col-lg-pull-`
+	     */
+	    lgPull: _react2['default'].PropTypes.number,
+	    /**
+	     * You can use a custom element for this component
+	     */
+	    componentClass: _reactPropTypesLibElementType2['default']
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      componentClass: 'div'
+	    };
+	  },
+	
+	  render: function render() {
+	    var _this = this;
+	
+	    var ComponentClass = this.props.componentClass;
+	    var classes = {};
+	
+	    _Object$keys(_styleMaps2['default'].SIZES).forEach(function (key) {
+	      var size = _styleMaps2['default'].SIZES[key];
+	      var prop = size;
+	      var classPart = size + '-';
+	
+	      if (_this.props[prop]) {
+	        classes['col-' + classPart + _this.props[prop]] = true;
+	      }
+	
+	      classes['hidden-' + size] = _this.props[size + 'Hidden'];
+	
+	      prop = size + 'Offset';
+	      classPart = size + '-offset-';
+	      if (_this.props[prop] >= 0) {
+	        classes['col-' + classPart + _this.props[prop]] = true;
+	      }
+	
+	      prop = size + 'Push';
+	      classPart = size + '-push-';
+	      if (_this.props[prop] >= 0) {
+	        classes['col-' + classPart + _this.props[prop]] = true;
+	      }
+	
+	      prop = size + 'Pull';
+	      classPart = size + '-pull-';
+	      if (_this.props[prop] >= 0) {
+	        classes['col-' + classPart + _this.props[prop]] = true;
+	      }
+	    }, this);
+	
+	    return _react2['default'].createElement(
+	      ComponentClass,
+	      _extends({}, this.props, { className: _classnames2['default'](this.props.className, classes) }),
+	      this.props.children
+	    );
+	  }
+	});
+	
+	exports['default'] = Col;
+	module.exports = exports['default'];
+
+/***/ },
+/* 250 */
+/*!****************************************!*\
+  !*** ./~/react-bootstrap/lib/Input.js ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _inherits = __webpack_require__(/*! babel-runtime/helpers/inherits */ 251)['default'];
+	
+	var _classCallCheck = __webpack_require__(/*! babel-runtime/helpers/class-call-check */ 258)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	var _interopRequireWildcard = __webpack_require__(/*! babel-runtime/helpers/interop-require-wildcard */ 259)['default'];
+	
+	exports.__esModule = true;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _InputBase2 = __webpack_require__(/*! ./InputBase */ 260);
+	
+	var _InputBase3 = _interopRequireDefault(_InputBase2);
+	
+	var _FormControls = __webpack_require__(/*! ./FormControls */ 263);
+	
+	var FormControls = _interopRequireWildcard(_FormControls);
+	
+	var _utilsDeprecationWarning = __webpack_require__(/*! ./utils/deprecationWarning */ 268);
+	
+	var _utilsDeprecationWarning2 = _interopRequireDefault(_utilsDeprecationWarning);
+	
+	var Input = (function (_InputBase) {
+	  _inherits(Input, _InputBase);
+	
+	  function Input() {
+	    _classCallCheck(this, Input);
+	
+	    _InputBase.apply(this, arguments);
+	  }
+	
+	  Input.prototype.render = function render() {
+	    if (this.props.type === 'static') {
+	      _utilsDeprecationWarning2['default']('Input type=static', 'FormControls.Static');
+	      return _react2['default'].createElement(FormControls.Static, this.props);
+	    }
+	
+	    return _InputBase.prototype.render.call(this);
+	  };
+	
+	  return Input;
+	})(_InputBase3['default']);
+	
+	Input.propTypes = {
+	  type: _react2['default'].PropTypes.string
+	};
+	
+	exports['default'] = Input;
+	module.exports = exports['default'];
+
+/***/ },
+/* 251 */
+/*!*********************************************!*\
+  !*** ./~/babel-runtime/helpers/inherits.js ***!
+  \*********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _Object$create = __webpack_require__(/*! babel-runtime/core-js/object/create */ 241)["default"];
+	
+	var _Object$setPrototypeOf = __webpack_require__(/*! babel-runtime/core-js/object/set-prototype-of */ 252)["default"];
+	
+	exports["default"] = function (subClass, superClass) {
+	  if (typeof superClass !== "function" && superClass !== null) {
+	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	  }
+	
+	  subClass.prototype = _Object$create(superClass && superClass.prototype, {
+	    constructor: {
+	      value: subClass,
+	      enumerable: false,
+	      writable: true,
+	      configurable: true
+	    }
+	  });
+	  if (superClass) _Object$setPrototypeOf ? _Object$setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 252 */
+/*!************************************************************!*\
+  !*** ./~/babel-runtime/core-js/object/set-prototype-of.js ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ 253), __esModule: true };
+
+/***/ },
+/* 253 */
+/*!*********************************************************!*\
+  !*** ./~/core-js/library/fn/object/set-prototype-of.js ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(/*! ../../modules/es6.object.set-prototype-of */ 254);
+	module.exports = __webpack_require__(/*! ../../modules/$.core */ 225).Object.setPrototypeOf;
+
+/***/ },
+/* 254 */
+/*!******************************************************************!*\
+  !*** ./~/core-js/library/modules/es6.object.set-prototype-of.js ***!
+  \******************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.19 Object.setPrototypeOf(O, proto)
+	var $export = __webpack_require__(/*! ./$.export */ 223);
+	$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(/*! ./$.set-proto */ 255).set});
+
+/***/ },
+/* 255 */
+/*!**************************************************!*\
+  !*** ./~/core-js/library/modules/$.set-proto.js ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// Works with __proto__ only. Old v8 can't work with null proto objects.
+	/* eslint-disable no-proto */
+	var getDesc  = __webpack_require__(/*! ./$ */ 229).getDesc
+	  , isObject = __webpack_require__(/*! ./$.is-object */ 256)
+	  , anObject = __webpack_require__(/*! ./$.an-object */ 257);
+	var check = function(O, proto){
+	  anObject(O);
+	  if(!isObject(proto) && proto !== null)throw TypeError(proto + ": can't set as prototype!");
+	};
+	module.exports = {
+	  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
+	    function(test, buggy, set){
+	      try {
+	        set = __webpack_require__(/*! ./$.ctx */ 226)(Function.call, getDesc(Object.prototype, '__proto__').set, 2);
+	        set(test, []);
+	        buggy = !(test instanceof Array);
+	      } catch(e){ buggy = true; }
+	      return function setPrototypeOf(O, proto){
+	        check(O, proto);
+	        if(buggy)O.__proto__ = proto;
+	        else set(O, proto);
+	        return O;
+	      };
+	    }({}, false) : undefined),
+	  check: check
+	};
+
+/***/ },
+/* 256 */
+/*!**************************************************!*\
+  !*** ./~/core-js/library/modules/$.is-object.js ***!
+  \**************************************************/
+/***/ function(module, exports) {
+
+	module.exports = function(it){
+	  return typeof it === 'object' ? it !== null : typeof it === 'function';
+	};
+
+/***/ },
+/* 257 */
+/*!**************************************************!*\
+  !*** ./~/core-js/library/modules/$.an-object.js ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var isObject = __webpack_require__(/*! ./$.is-object */ 256);
+	module.exports = function(it){
+	  if(!isObject(it))throw TypeError(it + ' is not an object!');
+	  return it;
+	};
+
+/***/ },
+/* 258 */
+/*!*****************************************************!*\
+  !*** ./~/babel-runtime/helpers/class-call-check.js ***!
+  \*****************************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	exports["default"] = function (instance, Constructor) {
+	  if (!(instance instanceof Constructor)) {
+	    throw new TypeError("Cannot call a class as a function");
+	  }
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 259 */
+/*!*************************************************************!*\
+  !*** ./~/babel-runtime/helpers/interop-require-wildcard.js ***!
+  \*************************************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	exports["default"] = function (obj) {
+	  if (obj && obj.__esModule) {
+	    return obj;
+	  } else {
+	    var newObj = {};
+	
+	    if (obj != null) {
+	      for (var key in obj) {
+	        if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
+	      }
+	    }
+	
+	    newObj["default"] = obj;
+	    return newObj;
+	  }
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 260 */
+/*!********************************************!*\
+  !*** ./~/react-bootstrap/lib/InputBase.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _inherits = __webpack_require__(/*! babel-runtime/helpers/inherits */ 251)['default'];
+	
+	var _classCallCheck = __webpack_require__(/*! babel-runtime/helpers/class-call-check */ 258)['default'];
+	
+	var _extends = __webpack_require__(/*! babel-runtime/helpers/extends */ 219)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _classnames = __webpack_require__(/*! classnames */ 236);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _FormGroup = __webpack_require__(/*! ./FormGroup */ 261);
+	
+	var _FormGroup2 = _interopRequireDefault(_FormGroup);
+	
+	var _Glyphicon = __webpack_require__(/*! ./Glyphicon */ 262);
+	
+	var _Glyphicon2 = _interopRequireDefault(_Glyphicon);
+	
+	var InputBase = (function (_React$Component) {
+	  _inherits(InputBase, _React$Component);
+	
+	  function InputBase() {
+	    _classCallCheck(this, InputBase);
+	
+	    _React$Component.apply(this, arguments);
+	  }
+	
+	  InputBase.prototype.getInputDOMNode = function getInputDOMNode() {
+	    return this.refs.input;
+	  };
+	
+	  InputBase.prototype.getValue = function getValue() {
+	    if (this.props.type === 'static') {
+	      return this.props.value;
+	    } else if (this.props.type) {
+	      if (this.props.type === 'select' && this.props.multiple) {
+	        return this.getSelectedOptions();
+	      }
+	      return this.getInputDOMNode().value;
+	    }
+	    throw new Error('Cannot use getValue without specifying input type.');
+	  };
+	
+	  InputBase.prototype.getChecked = function getChecked() {
+	    return this.getInputDOMNode().checked;
+	  };
+	
+	  InputBase.prototype.getSelectedOptions = function getSelectedOptions() {
+	    var values = [];
+	
+	    Array.prototype.forEach.call(this.getInputDOMNode().getElementsByTagName('option'), function (option) {
+	      if (option.selected) {
+	        var value = option.getAttribute('value') || option.innerHtml;
+	        values.push(value);
+	      }
+	    });
+	
+	    return values;
+	  };
+	
+	  InputBase.prototype.isCheckboxOrRadio = function isCheckboxOrRadio() {
+	    return this.props.type === 'checkbox' || this.props.type === 'radio';
+	  };
+	
+	  InputBase.prototype.isFile = function isFile() {
+	    return this.props.type === 'file';
+	  };
+	
+	  InputBase.prototype.renderInputGroup = function renderInputGroup(children) {
+	    var addonBefore = this.props.addonBefore ? _react2['default'].createElement(
+	      'span',
+	      { className: 'input-group-addon', key: 'addonBefore' },
+	      this.props.addonBefore
+	    ) : null;
+	
+	    var addonAfter = this.props.addonAfter ? _react2['default'].createElement(
+	      'span',
+	      { className: 'input-group-addon', key: 'addonAfter' },
+	      this.props.addonAfter
+	    ) : null;
+	
+	    var buttonBefore = this.props.buttonBefore ? _react2['default'].createElement(
+	      'span',
+	      { className: 'input-group-btn' },
+	      this.props.buttonBefore
+	    ) : null;
+	
+	    var buttonAfter = this.props.buttonAfter ? _react2['default'].createElement(
+	      'span',
+	      { className: 'input-group-btn' },
+	      this.props.buttonAfter
+	    ) : null;
+	
+	    var inputGroupClassName = undefined;
+	    switch (this.props.bsSize) {
+	      case 'small':
+	        inputGroupClassName = 'input-group-sm';break;
+	      case 'large':
+	        inputGroupClassName = 'input-group-lg';break;
+	      default:
+	    }
+	
+	    return addonBefore || addonAfter || buttonBefore || buttonAfter ? _react2['default'].createElement(
+	      'div',
+	      { className: _classnames2['default'](inputGroupClassName, 'input-group'), key: 'input-group' },
+	      addonBefore,
+	      buttonBefore,
+	      children,
+	      addonAfter,
+	      buttonAfter
+	    ) : children;
+	  };
+	
+	  InputBase.prototype.renderIcon = function renderIcon() {
+	    if (this.props.hasFeedback) {
+	      if (this.props.feedbackIcon) {
+	        return _react2['default'].cloneElement(this.props.feedbackIcon, { formControlFeedback: true });
+	      }
+	
+	      switch (this.props.bsStyle) {
+	        case 'success':
+	          return _react2['default'].createElement(_Glyphicon2['default'], { formControlFeedback: true, glyph: 'ok', key: 'icon' });
+	        case 'warning':
+	          return _react2['default'].createElement(_Glyphicon2['default'], { formControlFeedback: true, glyph: 'warning-sign', key: 'icon' });
+	        case 'error':
+	          return _react2['default'].createElement(_Glyphicon2['default'], { formControlFeedback: true, glyph: 'remove', key: 'icon' });
+	        default:
+	          return _react2['default'].createElement('span', { className: 'form-control-feedback', key: 'icon' });
+	      }
+	    } else {
+	      return null;
+	    }
+	  };
+	
+	  InputBase.prototype.renderHelp = function renderHelp() {
+	    return this.props.help ? _react2['default'].createElement(
+	      'span',
+	      { className: 'help-block', key: 'help' },
+	      this.props.help
+	    ) : null;
+	  };
+	
+	  InputBase.prototype.renderCheckboxAndRadioWrapper = function renderCheckboxAndRadioWrapper(children) {
+	    var classes = {
+	      'checkbox': this.props.type === 'checkbox',
+	      'radio': this.props.type === 'radio'
+	    };
+	
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: _classnames2['default'](classes), key: 'checkboxRadioWrapper' },
+	      children
+	    );
+	  };
+	
+	  InputBase.prototype.renderWrapper = function renderWrapper(children) {
+	    return this.props.wrapperClassName ? _react2['default'].createElement(
+	      'div',
+	      { className: this.props.wrapperClassName, key: 'wrapper' },
+	      children
+	    ) : children;
+	  };
+	
+	  InputBase.prototype.renderLabel = function renderLabel(children) {
+	    var classes = {
+	      'control-label': !this.isCheckboxOrRadio()
+	    };
+	    classes[this.props.labelClassName] = this.props.labelClassName;
+	
+	    return this.props.label ? _react2['default'].createElement(
+	      'label',
+	      { htmlFor: this.props.id, className: _classnames2['default'](classes), key: 'label' },
+	      children,
+	      this.props.label
+	    ) : children;
+	  };
+	
+	  InputBase.prototype.renderInput = function renderInput() {
+	    if (!this.props.type) {
+	      return this.props.children;
+	    }
+	
+	    switch (this.props.type) {
+	      case 'select':
+	        return _react2['default'].createElement(
+	          'select',
+	          _extends({}, this.props, { className: _classnames2['default'](this.props.className, 'form-control'), ref: 'input', key: 'input' }),
+	          this.props.children
+	        );
+	      case 'textarea':
+	        return _react2['default'].createElement('textarea', _extends({}, this.props, { className: _classnames2['default'](this.props.className, 'form-control'), ref: 'input', key: 'input' }));
+	      case 'static':
+	        return _react2['default'].createElement(
+	          'p',
+	          _extends({}, this.props, { className: _classnames2['default'](this.props.className, 'form-control-static'), ref: 'input', key: 'input' }),
+	          this.props.value
+	        );
+	      default:
+	        var className = this.isCheckboxOrRadio() || this.isFile() ? '' : 'form-control';
+	        return _react2['default'].createElement('input', _extends({}, this.props, { className: _classnames2['default'](this.props.className, className), ref: 'input', key: 'input' }));
+	    }
+	  };
+	
+	  InputBase.prototype.renderFormGroup = function renderFormGroup(children) {
+	    return _react2['default'].createElement(
+	      _FormGroup2['default'],
+	      this.props,
+	      children
+	    );
+	  };
+	
+	  InputBase.prototype.renderChildren = function renderChildren() {
+	    return !this.isCheckboxOrRadio() ? [this.renderLabel(), this.renderWrapper([this.renderInputGroup(this.renderInput()), this.renderIcon(), this.renderHelp()])] : this.renderWrapper([this.renderCheckboxAndRadioWrapper(this.renderLabel(this.renderInput())), this.renderHelp()]);
+	  };
+	
+	  InputBase.prototype.render = function render() {
+	    var children = this.renderChildren();
+	    return this.renderFormGroup(children);
+	  };
+	
+	  return InputBase;
+	})(_react2['default'].Component);
+	
+	InputBase.propTypes = {
+	  type: _react2['default'].PropTypes.string,
+	  label: _react2['default'].PropTypes.node,
+	  help: _react2['default'].PropTypes.node,
+	  addonBefore: _react2['default'].PropTypes.node,
+	  addonAfter: _react2['default'].PropTypes.node,
+	  buttonBefore: _react2['default'].PropTypes.node,
+	  buttonAfter: _react2['default'].PropTypes.node,
+	  bsSize: _react2['default'].PropTypes.oneOf(['small', 'medium', 'large']),
+	  bsStyle: _react2['default'].PropTypes.oneOf(['success', 'warning', 'error']),
+	  hasFeedback: _react2['default'].PropTypes.bool,
+	  feedbackIcon: _react2['default'].PropTypes.node,
+	  id: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number]),
+	  groupClassName: _react2['default'].PropTypes.string,
+	  wrapperClassName: _react2['default'].PropTypes.string,
+	  labelClassName: _react2['default'].PropTypes.string,
+	  multiple: _react2['default'].PropTypes.bool,
+	  disabled: _react2['default'].PropTypes.bool,
+	  value: _react2['default'].PropTypes.any
+	};
+	
+	InputBase.defaultProps = {
+	  disabled: false,
+	  hasFeedback: false,
+	  multiple: false
+	};
+	
+	exports['default'] = InputBase;
+	module.exports = exports['default'];
+
+/***/ },
+/* 261 */
+/*!********************************************!*\
+  !*** ./~/react-bootstrap/lib/FormGroup.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _inherits = __webpack_require__(/*! babel-runtime/helpers/inherits */ 251)['default'];
+	
+	var _classCallCheck = __webpack_require__(/*! babel-runtime/helpers/class-call-check */ 258)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(/*! classnames */ 236);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var FormGroup = (function (_React$Component) {
+	  _inherits(FormGroup, _React$Component);
+	
+	  function FormGroup() {
+	    _classCallCheck(this, FormGroup);
+	
+	    _React$Component.apply(this, arguments);
+	  }
+	
+	  FormGroup.prototype.render = function render() {
+	    var classes = {
+	      'form-group': !this.props.standalone,
+	      'form-group-lg': !this.props.standalone && this.props.bsSize === 'large',
+	      'form-group-sm': !this.props.standalone && this.props.bsSize === 'small',
+	      'has-feedback': this.props.hasFeedback,
+	      'has-success': this.props.bsStyle === 'success',
+	      'has-warning': this.props.bsStyle === 'warning',
+	      'has-error': this.props.bsStyle === 'error'
+	    };
+	
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: _classnames2['default'](classes, this.props.groupClassName) },
+	      this.props.children
+	    );
+	  };
+	
+	  return FormGroup;
+	})(_react2['default'].Component);
+	
+	FormGroup.defaultProps = {
+	  hasFeedback: false,
+	  standalone: false
+	};
+	
+	FormGroup.propTypes = {
+	  standalone: _react2['default'].PropTypes.bool,
+	  hasFeedback: _react2['default'].PropTypes.bool,
+	  bsSize: function bsSize(props) {
+	    if (props.standalone && props.bsSize !== undefined) {
+	      return new Error('bsSize will not be used when `standalone` is set.');
+	    }
+	
+	    return _react2['default'].PropTypes.oneOf(['small', 'medium', 'large']).apply(null, arguments);
+	  },
+	  bsStyle: _react2['default'].PropTypes.oneOf(['success', 'warning', 'error']),
+	  groupClassName: _react2['default'].PropTypes.string
+	};
+	
+	exports['default'] = FormGroup;
+	module.exports = exports['default'];
+
+/***/ },
+/* 262 */
+/*!********************************************!*\
+  !*** ./~/react-bootstrap/lib/Glyphicon.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _extends = __webpack_require__(/*! babel-runtime/helpers/extends */ 219)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(/*! classnames */ 236);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var Glyphicon = _react2['default'].createClass({
+	  displayName: 'Glyphicon',
+	
+	  propTypes: {
+	    /**
+	     * bootstrap className
+	     * @private
+	     */
+	    bsClass: _react2['default'].PropTypes.string,
+	    /**
+	     * An icon name. See e.g. http://getbootstrap.com/components/#glyphicons
+	     */
+	    glyph: _react2['default'].PropTypes.string.isRequired,
+	    /**
+	     * Adds 'form-control-feedback' class
+	     * @private
+	     */
+	    formControlFeedback: _react2['default'].PropTypes.bool
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      bsClass: 'glyphicon',
+	      formControlFeedback: false
+	    };
+	  },
+	
+	  render: function render() {
+	    var _classNames;
+	
+	    var className = _classnames2['default'](this.props.className, (_classNames = {}, _classNames[this.props.bsClass] = true, _classNames['glyphicon-' + this.props.glyph] = true, _classNames['form-control-feedback'] = this.props.formControlFeedback, _classNames));
+	
+	    return _react2['default'].createElement(
+	      'span',
+	      _extends({}, this.props, { className: className }),
+	      this.props.children
+	    );
+	  }
+	});
+	
+	exports['default'] = Glyphicon;
+	module.exports = exports['default'];
+
+/***/ },
+/* 263 */
+/*!*****************************************************!*\
+  !*** ./~/react-bootstrap/lib/FormControls/index.js ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _Static2 = __webpack_require__(/*! ./Static */ 264);
+	
+	var _Static3 = _interopRequireDefault(_Static2);
+	
+	exports.Static = _Static3['default'];
+
+/***/ },
+/* 264 */
+/*!******************************************************!*\
+  !*** ./~/react-bootstrap/lib/FormControls/Static.js ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _inherits = __webpack_require__(/*! babel-runtime/helpers/inherits */ 251)['default'];
+	
+	var _classCallCheck = __webpack_require__(/*! babel-runtime/helpers/class-call-check */ 258)['default'];
+	
+	var _objectWithoutProperties = __webpack_require__(/*! babel-runtime/helpers/object-without-properties */ 265)['default'];
+	
+	var _extends = __webpack_require__(/*! babel-runtime/helpers/extends */ 219)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(/*! classnames */ 236);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _InputBase2 = __webpack_require__(/*! ../InputBase */ 260);
+	
+	var _InputBase3 = _interopRequireDefault(_InputBase2);
+	
+	var _utilsChildrenValueInputValidation = __webpack_require__(/*! ../utils/childrenValueInputValidation */ 266);
+	
+	var _utilsChildrenValueInputValidation2 = _interopRequireDefault(_utilsChildrenValueInputValidation);
+	
+	var _reactPropTypesLibElementType = __webpack_require__(/*! react-prop-types/lib/elementType */ 237);
+	
+	var _reactPropTypesLibElementType2 = _interopRequireDefault(_reactPropTypesLibElementType);
+	
+	var Static = (function (_InputBase) {
+	  _inherits(Static, _InputBase);
+	
+	  function Static() {
+	    _classCallCheck(this, Static);
+	
+	    _InputBase.apply(this, arguments);
+	  }
+	
+	  Static.prototype.getValue = function getValue() {
+	    var _props = this.props;
+	    var children = _props.children;
+	    var value = _props.value;
+	
+	    return children ? children : value;
+	  };
+	
+	  Static.prototype.renderInput = function renderInput() {
+	    var _props2 = this.props;
+	    var ComponentClass = _props2.componentClass;
+	
+	    var props = _objectWithoutProperties(_props2, ['componentClass']);
+	
+	    return _react2['default'].createElement(
+	      ComponentClass,
+	      _extends({}, props, { className: _classnames2['default'](props.className, 'form-control-static'), ref: 'input', key: 'input' }),
+	      this.getValue()
+	    );
+	  };
+	
+	  return Static;
+	})(_InputBase3['default']);
+	
+	Static.propTypes = {
+	  value: _utilsChildrenValueInputValidation2['default'],
+	  /**
+	   * You can override the default 'p' with a custom element
+	   */
+	  componentClass: _reactPropTypesLibElementType2['default'],
+	  children: _utilsChildrenValueInputValidation2['default']
+	};
+	
+	Static.defaultProps = {
+	  componentClass: 'p'
+	};
+	
+	exports['default'] = Static;
+	module.exports = exports['default'];
+
+/***/ },
+/* 265 */
+/*!**************************************************************!*\
+  !*** ./~/babel-runtime/helpers/object-without-properties.js ***!
+  \**************************************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	exports["default"] = function (obj, keys) {
+	  var target = {};
+	
+	  for (var i in obj) {
+	    if (keys.indexOf(i) >= 0) continue;
+	    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+	    target[i] = obj[i];
+	  }
+	
+	  return target;
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 266 */
+/*!*********************************************************************!*\
+  !*** ./~/react-bootstrap/lib/utils/childrenValueInputValidation.js ***!
+  \*********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	exports['default'] = valueValidation;
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactPropTypesLibSinglePropFrom = __webpack_require__(/*! react-prop-types/lib/singlePropFrom */ 267);
+	
+	var _reactPropTypesLibSinglePropFrom2 = _interopRequireDefault(_reactPropTypesLibSinglePropFrom);
+	
+	function valueValidation(props, propName, componentName) {
+	  var error = _reactPropTypesLibSinglePropFrom2['default']('children', 'value')(props, propName, componentName);
+	
+	  if (!error) {
+	    error = _react2['default'].PropTypes.node(props, propName, componentName);
+	  }
+	
+	  return error;
+	}
+	
+	module.exports = exports['default'];
+
+/***/ },
+/* 267 */
+/*!**************************************************!*\
+  !*** ./~/react-prop-types/lib/singlePropFrom.js ***!
+  \**************************************************/
+/***/ function(module, exports) {
+
+	/**
+	 * Checks if only one of the listed properties is in use. An error is given
+	 * if multiple have a value
+	 *
+	 * @param props
+	 * @param propName
+	 * @param componentName
+	 * @returns {Error|undefined}
+	 */
+	'use strict';
+	
+	exports.__esModule = true;
+	exports['default'] = createSinglePropFromChecker;
+	
+	function createSinglePropFromChecker() {
+	  for (var _len = arguments.length, arrOfProps = Array(_len), _key = 0; _key < _len; _key++) {
+	    arrOfProps[_key] = arguments[_key];
+	  }
+	
+	  function validate(props, propName, componentName) {
+	    var usedPropCount = arrOfProps.map(function (listedProp) {
+	      return props[listedProp];
+	    }).reduce(function (acc, curr) {
+	      return acc + (curr !== undefined ? 1 : 0);
+	    }, 0);
+	
+	    if (usedPropCount > 1) {
+	      var first = arrOfProps[0];
+	      var others = arrOfProps.slice(1);
+	
+	      var message = others.join(', ') + ' and ' + first;
+	      return new Error('Invalid prop \'' + propName + '\', only one of the following ' + ('may be provided: ' + message));
+	    }
+	  }
+	  return validate;
+	}
+	
+	module.exports = exports['default'];
+
+/***/ },
+/* 268 */
+/*!***********************************************************!*\
+  !*** ./~/react-bootstrap/lib/utils/deprecationWarning.js ***!
+  \***********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+	
+	var _inherits = __webpack_require__(/*! babel-runtime/helpers/inherits */ 251)['default'];
+	
+	var _classCallCheck = __webpack_require__(/*! babel-runtime/helpers/class-call-check */ 258)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(/*! babel-runtime/helpers/interop-require-default */ 235)['default'];
+	
+	exports.__esModule = true;
+	
+	var _warning = __webpack_require__(/*! warning */ 164);
+	
+	var _warning2 = _interopRequireDefault(_warning);
+	
+	var warned = {};
+	
+	function deprecationWarning(oldname, newname, link) {
+	  var message = undefined;
+	
+	  if (typeof oldname === 'object') {
+	    message = oldname.message;
+	  } else {
+	    message = oldname + ' is deprecated. Use ' + newname + ' instead.';
+	
+	    if (link) {
+	      message += '\nYou can read more about it at ' + link;
+	    }
+	  }
+	
+	  if (warned[message]) {
+	    return;
+	  }
+	
+	  process.env.NODE_ENV !== 'production' ? _warning2['default'](false, message) : undefined;
+	  warned[message] = true;
+	}
+	
+	deprecationWarning.wrapper = function (Component) {
+	  for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	    args[_key - 1] = arguments[_key];
+	  }
+	
+	  return (function (_Component) {
+	    _inherits(DeprecatedComponent, _Component);
+	
+	    function DeprecatedComponent() {
+	      _classCallCheck(this, DeprecatedComponent);
+	
+	      _Component.apply(this, arguments);
+	    }
+	
+	    DeprecatedComponent.prototype.componentWillMount = function componentWillMount() {
+	      deprecationWarning.apply(undefined, args);
+	
+	      if (_Component.prototype.componentWillMount) {
+	        var _Component$prototype$componentWillMount;
+	
+	        for (var _len2 = arguments.length, methodArgs = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+	          methodArgs[_key2] = arguments[_key2];
+	        }
+	
+	        (_Component$prototype$componentWillMount = _Component.prototype.componentWillMount).call.apply(_Component$prototype$componentWillMount, [this].concat(methodArgs));
+	      }
+	    };
+	
+	    return DeprecatedComponent;
+	  })(Component);
+	};
+	
+	exports['default'] = deprecationWarning;
+	module.exports = exports['default'];
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 5)))
 
 /***/ }
 /******/ ]);
