@@ -28,6 +28,7 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
+    "flux": "^2.1.1",
     "formidable": "0.9.11",
     "fs-extra": "0.26.2",
     "jsonwebtoken": "5.4.1",

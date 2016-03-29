@@ -6,42 +6,10 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Input from 'react-bootstrap/lib/Input';
+import AuthAction from '../actions/AuthAction';
 
-const gridInstance = (
-<div class="text-center">
-	<Grid mdOffset={4}>
-		<Row>
-			<Col mdOffset={4} md={12}>
-				<Row>
-					<Col md={4}>
-						<h1>Login</h1>
-					</Col>
-				</Row>
-				<Row>
-					<Col md={4}>
-						<Input type="text" label="Email" placeholder="Email" />
-					</Col>
-				</Row>
-				<Row>
-					<Col md={4}>
-						<Input type="password" label="Password" />
-					</Col>
-				</Row>
-				<Row>
-					<Col md={4}>
-						Dont have an account? Please <Link to={`/signup`}>Signup</Link>
-					</Col>
-				</Row>
-				<Row>
-					<Col md={4}>
-						<Button bsSize="large" block>Login</Button>
-					</Col>
-				</Row>
-			</Col>
-		</Row>
-	</Grid>
- </div>
-);
+
+
 
 
 const signUpInstance = (
@@ -96,9 +64,49 @@ const signUpInstance = (
 );
 
 class Login extends React.Component {
+
   render() {
-    return gridInstance;
+    return (
+<div class="text-center">
+	<Grid mdOffset={4}>
+		<Row>
+			<Col mdOffset={4} md={12}>
+				<Row>
+					<Col md={4}>
+						<h1>Login</h1>
+					</Col>
+				</Row>
+				<Row>
+					<Col md={4}>
+						<Input type="text" label="Email" placeholder="Email" />
+					</Col>
+				</Row>
+				<Row>
+					<Col md={4}>
+						<Input type="password" label="Password" />
+					</Col>
+				</Row>
+				<Row>
+					<Col md={4}>
+						Dont have an account? Please <Link to={`/signup`}>Signup</Link>
+					</Col>
+				</Row>
+				<Row>
+					<Col md={4}>
+						<Button onClick={this.onLogin} bsSize="large" block>Login</Button>
+					</Col>
+				</Row>
+			</Col>
+		</Row>
+	</Grid>
+ </div>
+    	);
   }
+
+  onLogin () {
+  	AuthAction.login();
+  }
+
 };
 
 class SignUp extends React.Component {
