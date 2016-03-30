@@ -41,7 +41,7 @@ AppDispatcher.register( function( payload ) {
         case 'login':
 
             // We get to mutate data!
-            _message = 'Como Camaron!';
+            _message = 'Your user/password doesn´t match our records';
             AuthStore.emitChange();
             break;
 

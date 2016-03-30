@@ -38,7 +38,10 @@ var config = {
   plugins: [
     new ExtractTextPlugin('styles.css', {
             allChunks: true
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: APP_DIR + '/images', to:'images/'},
+    ])
 
   ]
 

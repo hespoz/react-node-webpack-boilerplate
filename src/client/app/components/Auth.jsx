@@ -100,11 +100,6 @@ class Login extends React.Component {
 			<Col mdOffset={4} md={12}>
 				<Row>
 					<Col md={4}>
-						<h1>Login</h1>
-					</Col>
-				</Row>
-				<Row>
-					<Col md={4}>
 					{ this.state.message ? 
 
 						<ListGroup>
