@@ -57,6 +57,20 @@ If everything went fine you should see the following
 
 Express server listening on port 3000
 ```
-Then go and open http://localhost:3000/ url, and check if everything is working.
 
-At this point you can open the project using your favorite IDE and start coding, each time you save a file the webpack and nodemon scripts will rebuild your application.
+After running the scripts above, go to 
+
+```sh
+http://localhost:3000/auth
+```
+
+And you will see this:
+
+![alt tag](https://raw.githubusercontent.com/hespoz/react-node-webpack-boilerplate/master/docs/Captura%20de%20pantalla%202016-03-29%20a%20las%2011.12.01%20p.m..png)
+
+
+# TO-DO's
+
+- Backend login service.
+- If login is successfull redirect to index page.
+
