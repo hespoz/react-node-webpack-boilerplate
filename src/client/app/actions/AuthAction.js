@@ -1,17 +1,14 @@
 import AppDispatcher from '../dispatchers/AppDispatcher';
 
-/*class AuthAction {
-	login (){
-		alert(2)
-	}
-}
-
-export default AuthAction;*/
-
 var AuthAction = {
 
   login: function() {
-    alert(2);
+  	  console.log("Entro 1");
+      console.log(AppDispatcher);
+      AppDispatcher.dispatch({
+        actionName: 'login',
+        newItem: { name: 'Marco' } // example data
+      });
   }
 
 }

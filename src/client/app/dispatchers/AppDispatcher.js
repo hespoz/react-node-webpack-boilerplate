@@ -1,3 +1,3 @@
 import AppDispatcher from 'flux/lib/Dispatcher';
 
-module.exports = AppDispatcher;
+module.exports = new AppDispatcher();

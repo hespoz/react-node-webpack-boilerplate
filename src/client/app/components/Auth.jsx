@@ -6,10 +6,10 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Input from 'react-bootstrap/lib/Input';
+import ListGroup from 'react-bootstrap/lib/ListGroup';
+import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 import AuthAction from '../actions/AuthAction';
-
-
-
+import AuthStore from '../stores/AuthStore';
 
 
 const signUpInstance = (
@@ -63,7 +63,34 @@ const signUpInstance = (
  </div>
 );
 
+
+/**
+ * Retrieve the current TODO data from the TodoStore
+ */
+function getAuthStoreState() {
+  return {
+    message: AuthStore.getMessage()
+  };
+}
+
 class Login extends React.Component {
+
+  constructor(props) {
+  	super(props);
+  	this.state = {message: ''};
+  }
+
+  componentDidMount () {
+    AuthStore.addChangeListener(this.onChange.bind(this));
+  }
+
+  componentWillUnmount () {
+    AuthStore.removeChangeListener(this.onChange.bind(this));
+  }
+
+  onChange () {
+    this.setState(getAuthStoreState());
+  }
 
   render() {
     return (
@@ -76,6 +103,21 @@ class Login extends React.Component {
 						<h1>Login</h1>
 					</Col>
 				</Row>
+				<Row>
+					<Col md={4}>
+					{ this.state.message ? 
+
+						<ListGroup>
+    						<ListGroupItem bsStyle="danger">{this.state.message}</ListGroupItem>
+  						</ListGroup>
+
+					: null }
+
+
+					</Col>
+				</Row>
+				
+
 				<Row>
 					<Col md={4}>
 						<Input type="text" label="Email" placeholder="Email" />
