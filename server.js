@@ -13,7 +13,7 @@ var auth = require('./src/server/routes/auth');
 
 
 var config = require('./src/server/config')();
-//var db = require('./models');
+var db = require('./src/server/models');
 
 var app = express();
 
@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'src/client/public')));
 
-//require('./config/passport')(passport);
+require('./src/server/config/passport')(passport);
 
 app.use('/', routes);
 app.use('/auth', auth);
@@ -67,10 +67,19 @@ app.use(function(err, req, res, next) {
   });
 });
 
+db.sequelize.sync().then(function(err){
 
-http.createServer(app).listen(process.env.PORT || config.port, function() {
-  console.log('\nExpress server listening on port ' + config.port);
+      http.createServer(app).listen(process.env.PORT || config.port, function() {
+        console.log('\nExpress server listening on port ' + config.port);
+      });
+  
+
+}).catch(function(err){
+  console.log(err);
 });
+
+
+
 
 
 module.exports = app;

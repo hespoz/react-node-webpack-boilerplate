@@ -1,6 +1,7 @@
 import AppDispatcher from '../dispatchers/AppDispatcher';
 import { EventEmitter } from 'events';
 import assign from 'object-assign';
+import $ from "jquery";
 
 var CHANGE_EVENT = 'change';
 
@@ -41,8 +42,19 @@ AppDispatcher.register( function( payload ) {
         case 'login':
 
             // We get to mutate data!
-            _message = 'Your user/password doesn´t match our records';
-            AuthStore.emitChange();
+            var jsonStr = {
+                "email":"user1",
+                "password":"user1"
+            };
+            $.post('/auth/login', jsonStr , function(response) {
+                // Do something with the request
+                alert(response)
+                console.log(response);
+                _message = 'Your user/password doesn´t match our records';
+                AuthStore.emitChange();
+            }, 'json');
+
+            
             break;
 
     }
