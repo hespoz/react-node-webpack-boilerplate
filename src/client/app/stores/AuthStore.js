@@ -48,10 +48,15 @@ AppDispatcher.register( function( payload ) {
             };
             $.post('/auth/login', jsonStr , function(response) {
                 // Do something with the request
-                alert(response)
                 console.log(response);
-                _message = 'Your user/password doesn´t match our records';
+                if(response.error != undefined){
+                  _message = response.error;
+                } else {
+                  window.location.href = "/";
+                }
+                
                 AuthStore.emitChange();
+
             }, 'json');
 
             

@@ -8,14 +8,13 @@ var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 var config = {
   entry: {
-        pageA: APP_DIR + '/components/index.jsx',
-        pageB: APP_DIR + '/components/login.jsx',
-        pageC: APP_DIR + '/components/Auth.jsx'
+        index: APP_DIR + '/components/index.jsx',
+        auth: APP_DIR + '/components/Auth.jsx'
   },
 
   output: {
     path: BUILD_DIR,
-    filename: 'app.js'
+    filename: "[name].entry.js"
   },
   
   resolve: {

@@ -67,17 +67,18 @@ app.use(function(err, req, res, next) {
   });
 });
 
-db.sequelize.sync().then(function(err){
+/*db.sequelize.sync().then(function(err){
 
-      http.createServer(app).listen(process.env.PORT || config.port, function() {
-        console.log('\nExpress server listening on port ' + config.port);
-      });
   
 
 }).catch(function(err){
   console.log(err);
-});
+});*/
 
+
+http.createServer(app).listen(process.env.PORT || config.port, function() {
+  console.log('\nExpress server listening on port ' + config.port);
+});
 
 
 

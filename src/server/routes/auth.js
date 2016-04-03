@@ -21,7 +21,7 @@ router.post('/login', function(req, res, next) {
 	  }
 	}).then(function(user) {
 		console.log(user)
-		if(!user){
+		if(user.length == 0){
 			res.json({error:"Error de autenticacion, el usuario y password son incorrectos"});
 		}else{
 
